@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+</head>
+
+<body>
+    <div style="color:black" class="login">
+        <h1><center> Insurance Premium Prediction </center></h1>
+        <form action="{{ url_for('predict')}}"method="post">
+            <h3>Age</h3>
+            <input type="number" id="first" name="age" required="required">
+            <h3>Sex</h3>
+            <select name="sex" id="sex" required="required">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+            <h3>BMI</h3>
+            <input type="number" step="any" id="second" name="bmi" required="required" >
+            <h3>Number of children</h3>
+            <input type="number" id="third" name="children" required="required">
+            <h3>Smoker</h3>
+            <select name="smoker" id="smoker" required="required">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+            <h3>Region</h3>
+            <select name="region" id="region">
+                <option value="northeast">northeast</option>
+                <option value="northwest">northwest</option>
+                <option value="southeast">southeast</option>
+                <option value="southwest">southwest</option>
+            </select>
+            <br><br><button type="submit" id="submit"class="btn btn-primary btn-block btn-large">Calculate</button><br>
+
+        </form>
+
+        <br>
+    
+    </div>
+    <div style="color:royalblue"><h1>{{ prediction }}</h1></div>
+    
+
+	<style>
+		
+		body {
+            background-color: navajowhite;
+            background-blend-mode: overlay;
+            text-align: left;
+            padding: 60px;
+        }
+
+
+	</style>
+
+
+</body>
+</html>

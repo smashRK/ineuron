@@ -2,8 +2,8 @@ import pickle
 import json
 from flask import Flask,render_template,app,request,jsonify,url_for,redirect
 import numpy as np
+import sklearn
 import pandas as pd
-import sklearn 
 from logging import FileHandler, ERROR
 
 
